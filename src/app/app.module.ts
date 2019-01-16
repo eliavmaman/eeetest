@@ -8,9 +8,7 @@ import { UsersComponent } from './users/users.component';
 import {RouterModule} from '@angular/router';
 import {appRoutes} from './app.routes';
 import {HashLocationStrategy, LocationStrategy} from '@angular/common';
-export function get_settings(usersService: UsersService) {
-  return () => usersService;
-}
+
 
 @NgModule({
   declarations: [
@@ -22,12 +20,7 @@ export function get_settings(usersService: UsersService) {
     BrowserModule,
     HttpClientModule,
   ],
-  providers: [UsersService,  {provide: LocationStrategy, useClass: HashLocationStrategy},{
-    provide: APP_INITIALIZER,
-    useFactory: get_settings,
-    deps: [UsersService],
-    multi: true
-  }],
+  providers: [UsersService,  {provide: LocationStrategy, useClass: HashLocationStrategy},],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

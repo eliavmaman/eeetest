@@ -5,18 +5,27 @@ import {HttpClient} from '@angular/common/http';
   providedIn: 'root'
 })
 export class UsersService {
-  users: any[] = [];
+  users: any[] = [
+    {
+      'UserId': 1111,
+      'IsActive': true,
+      'Name': 'Cyberbit Name',
+      'Icon': '',
+      'Roles': [
+        {
+          'ID': 123,
+          'Name': 'Manager'
+        }
+      ]
+    }
+  ];
 
   constructor(private http: HttpClient) {
-    this.http.get('assets/user_object.json').subscribe((res: any[]) => {
-      this.users = [res];
-    });
+
   }
 
 
   getAllUsers(): Promise<any[]> {
-    return new Promise((resolve, reject) => {
-      resolve(this.users);
-    });
+    return Promise.resolve(this.users);
   }
 }

@@ -1,4 +1,15 @@
 <div class="col-sm-4">
+  <div class="row">
+
+    <div class="col-sm-12">
+      <div class="pull-right">ADD NEW <i class="fa fa-user" aria-hidden="true" style=""></i>
+      </div>
+    </div>
+  </div>
+
+  <div class="bg-blue">
+    <input type="text" class="form-control">
+  </div>
   <table class="table table-striped">
     <thead>
     <tr>
@@ -16,9 +27,9 @@
     <tbody>
     <tr *ngFor="let user of users">
       <td><input class="m-h-sm" type="checkbox"/></td>
-      <td>{{user.icon}}</td>
-      <td>{{user.name}}</td>
-      <td>{{user.isActive}}</td>
+      <td><img [src]="user.Icon" alt=""> </td>
+      <td>{{user.Name}}</td>
+      <td>{{user.IsActive}}</td>
     </tr>
 
     </tbody>
