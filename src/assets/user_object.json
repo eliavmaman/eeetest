@@ -1,0 +1,12 @@
+{   
+    "UserId": 1111,   
+    "IsActive": true,
+    "Name": "Cyberbit Name",    
+    "Icon": "",
+    "Roles": [
+        {
+            "ID": 123,
+            "Name": "Manager"
+        }
+    ]   
+}

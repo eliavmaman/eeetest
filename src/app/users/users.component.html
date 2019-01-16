@@ -1,0 +1,24 @@
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th>
+      <input class="m-h-sm"
+             type="checkbox"
+             [checked]="all"
+             (change)="chackUncheckAll()"/>
+    </th>
+    <th>PIC</th>
+    <th>NAME</th>
+    <th>ACTIVE</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let user of users">
+    <td> <input class="m-h-sm" type="checkbox"/></td>
+    <td>{{user.icon}}</td>
+    <td>{{user.name}}</td>
+    <td>{{user.isActive}}</td>
+  </tr>
+
+  </tbody>
+</table>
